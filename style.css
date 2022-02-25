@@ -30,10 +30,10 @@ header a{
 #bodyp1 section{
 	flex-wrap: wrap;
 }
-.navigation{
-	margin-left: 20%;/*margin: 0 auto;*/
-	width:100%;/*width: 1000px;*/
-}
+/* .navigation{
+	margin-left: 20%;/*margin: 0 auto;
+	width:100%;/*width: 1000px;
+} */
 header{
 	border-bottom: 1px solid #eee;
 }
