@@ -48,7 +48,7 @@ header li a{
 	padding:20px;
 }
 header li:hover a{
-	background-color: black;
+	background-color: rgb(0, 0, 0);
 	color:#fff;
 }
 header li:hover .sub-menu{
@@ -58,7 +58,7 @@ header li:hover .sub-menu{
 .sub-menu{
 	display:none;
 	position: absolute;
-	background-color:black;
+	background-color:rgb(0, 0, 0);
 	width:200px;
     padding: 0;
 }
@@ -79,10 +79,12 @@ header li:hover .sub-menu{
 	width:100%;
 }
 
-@media screen and (max-width : 770px) {
+@media screen and (max-width : 555px) {
     .intro{
     background-image:url("Images/ouvrier.jpg");
     background-repeat:no-repeat;
+    height: 525px;
+    width: 100%;
     }
 }
 
@@ -96,18 +98,17 @@ header li:hover .sub-menu{
 	flex-direction: center;
 }
 
+@font-face {
+    font-family: "WebPolice";
+    src: url("/fonts/okemo.woff") format("woff"),
+   }
+
 .bloc1 h2{
 	font-size: 45px;
 	padding-top:10%;
 	text-align: center;
 	padding-left: 1%;
-	text-shadow:#e7f6ff 0 -1px 0,
-	#a74a0c 1px 1px 0,
-	#d97f32 2px 2px 0,
-	#f5993d 3px 3px 0,
-	#fec362 4px 4px 0,
-	#ffe687 5px 5px 0,
-	#333 5px 5px 10px;color:#F30034;
+	font-family: WebPolice;
 }
 
 .bloc1 img{
@@ -118,22 +119,17 @@ header li:hover .sub-menu{
 @media screen and (max-width : 770px){ /*responsive du bloc1*/
 .bloc1{
 	flex-wrap: wrap;
+    align-items: center;
+    flex-direction: center;
+    display: flex;
 }
 .bloc1 h2{
 	font-size: 25px;
-	padding-top:10%;
 	text-align: center;
-	padding-left: 1%;
-	text-shadow:#e7f6ff 0 -1px 0,
-	#a74a0c 1px 1px 0,
-	#d97f32 2px 2px 0,
-	#f5993d 3px 3px 0,
-	#fec362 4px 4px 0,
-	#ffe687 5px 5px 0,
-	#333 5px 5px 10px;color:#F30034;
+	padding-left: 10px;
+	font-family: WebPolice;
 }
 }
-
 #bouton {
   color: #f7f7f7;
   font-family: "Lato", sans-serif;
@@ -303,5 +299,59 @@ footer {
     }
     .bloc:nth-child(1) {
         margin-top: 0;
+    }
+}
+
+
+/* PAGE HOTELS  */
+
+/* #bodyp2{
+
+} */
+.slider{
+	width:1000px;
+	height:500px;
+	background:url("Images/slider1.jpg");
+	margin:75px auto;
+	animation: slide 15s infinite;
+}
+
+@keyframes slide{
+	25%{
+		background:url("Images/slider1.jpg");
+	}
+	50%{
+		background:url("Images/slider2.jpg");
+	}
+	75%{
+		background:url("Images/slider3.jpg");
+	}
+	100%{
+		background:url("Images/slider4.png");
+	}
+}
+
+@media screen and (max-width:1000px){
+    .slider{
+    width: 75%;
+    align-items: center;
+    display: flex;
+    margin:25px auto;
+    background-image: url("Images/slider1r.jpg");
+    }
+
+    @keyframes slide{
+        25%{
+            background:url("Images/slider1r.jpg");
+        }
+        50%{
+            background:url("Images/slider2r.jpg");
+        }
+        75%{
+            background:url("Images/slider3r.jpg");
+        }
+        100%{
+            background:url("Images/slider4r.jpg");
+        }
     }
 }
